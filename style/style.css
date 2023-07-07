@@ -210,6 +210,10 @@ img {
   width: 50%;
   float: right;
 }
+
+.education__item:not(:last-child) {
+  margin-bottom: 20px;
+}
 /*languge*/
 .language {
   width: 100%;
