@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brooklyn Public Library</title>
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/font/Inter/stylesheet.css">
   <link rel="stylesheet" href="./assets/font/Forum/stylesheet.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
@@ -61,11 +62,30 @@
         <p class="about__descr flex">
           The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
         </p>
+        <div class="about__swiper swiper">
+          <div class="about__swiper_wrapper swiper-wrapper">
+            <div class="about__swiper_slide swiper-slide"><img class="about__swiper_img" src="./assets/img/swiper-about-img1.png" alt="foto"></div>
+            <div class="about__swiper_slide swiper-slide"><img class="about__swiper_img" src="./assets/img/swiper-about-img2.png" alt="foto"></div>
+            <div class="about__swiper_slide swiper-slide"><img class="about__swiper_img" src="./assets/img/swiper-about-img3.png" alt="foto"></div>
+            <div class="about__swiper_slide swiper-slide"><img class="about__swiper_img" src="./assets/img/swiper-about-img4.png" alt="foto"></div>
+            <div class="about__swiper_slide swiper-slide"><img class="about__swiper_img" src="./assets/img/swiper-about-img5.png" alt="foto"></div>
+          </div>
+          <div class="about__swiper_pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section class="favorites indent-section">
+      <div class="favorites__contaent_wrapper container">
+        <h2 class="favorites__title title flex">
+          Favorites
+        </h2>
       </div>
     </section>
 
   </main>
-
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<script src="./assets/js/swiper.js"></script>
+<script src="./assets/js/index.js"></script>
 </body>
 
 </html>
