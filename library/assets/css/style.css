@@ -7,6 +7,9 @@
   --hero-title-color: #fff;
   --bottom-line-color: #0C0C0E;
   --descr-color: #000;
+  --pagination-active-bullet-color: #BB945F;
+  --pagination-bullet-color: #0C0C0E;
+
 }
 
 /*GLOB*/
@@ -156,4 +159,28 @@ img {
   font-size: 20px;
   font-weight: 400;
   line-height: 40px;
+}
+
+.about__swiper {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.about__swiper_wrapper {
+  max-height: 560px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background-color: var(--pagination-bullet-color);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--pagination-active-bullet-color);
 }
