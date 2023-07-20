@@ -19,7 +19,10 @@
   --coffe-list-color: #000;
   --coffe-price-border-color: #BB945F;
   --contacts-text-color: #000;
-
+  --digital-text-color: #000;
+  --digital-form-border-color: #BB945F;
+  --digital-iput-text-color: #8E8E8E;
+  --digital-input-bg-color: #BB945F;
 }
 
 /*GLOB*/
@@ -496,4 +499,132 @@ img {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+}
+
+/*DIGITAL*/
+.digital__content_wrapper {
+  padding: 40px 0 0 0;
+}
+
+.digital__card_content {
+  width: 43%;
+}
+
+.digital__card_title {
+  color: var(--digital-text-color);
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin: 0;
+  text-align: center;
+}
+
+.digital__form {
+  width: 560px;
+  height: 272px;
+  flex-direction: column;
+}
+
+.digital__form_wrapper {
+  margin: 24px 0 0 0;
+  width: 600px;
+  height: 386px;
+  border: 3px solid var(--digital-form-border-color);
+}
+
+.digital__form {
+  padding: 20px 20px 30px 20px;
+}
+
+.digital__form_title {
+  color: var(--digital-text-color);
+  font-family: Forum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  margin: 20px 0 20px 20px;
+}
+
+.digital__input_wrapper {
+  background-color: var(--digital-input-bg-color);
+  margin-bottom: 20px;
+  min-height: 272px;
+}
+
+.digital-input {
+  margin: 0 20px;
+  padding: 8px 0 8px 20px;
+  color: var(--digital-iput-text-color);
+  font-family: Forum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 496px;
+  margin-bottom: 19px;
+  border: none;
+}
+
+.digital__form_btn {
+  padding: 10px 40px;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin: 0 154px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+}
+
+.digital__card_info {
+  width: 57%;
+  text-align: end;
+}
+
+.digital__info_title {
+  margin: 0;
+  color: var(--digital-text-color);
+  font-family: Forum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.digital__info_descr {
+  color: var(--digital-text-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+  margin: 0;
+  padding: 32px 0;
+}
+
+.digital__info_btn {
+  padding: 9px;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  width: 75px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+}
+
+.digital__info_btn:not(:last-child) {
+  margin-right: 15px;
 }
