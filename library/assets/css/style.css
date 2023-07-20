@@ -14,6 +14,11 @@
   --favorit-card-text-color: #000;
   --favorit-card-line-color: #BB945F;
   --favorit-border-btn: #0C0C0E;
+  --coffee-text-color: #000;
+  --coffe-range-title: #BB945F;
+  --coffe-list-color: #000;
+  --coffe-price-border-color: #BB945F;
+  --contacts-text-color: #000;
 
 }
 
@@ -351,4 +356,144 @@ img {
   position: absolute;
   top: 46%;
   right: -7%;
+}
+
+/*COFFEE*/
+.coffee__descr {
+  max-width: 1400px;
+  color: var(--coffee-text-color);
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+}
+
+.coffee__price_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coffee__drink_range {
+  width: 440px;
+}
+
+.coffee__title_range {
+  color: var(--coffe-range-title);
+  font-family: Forum;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.coffe__list {
+  color: var(--coffe-list-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.coffe__item {
+  padding: 40px 0 0 0;
+  position: relative;
+}
+
+.coffe__drink_item::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  border: 1px solid var(--coffe-price-border-color);
+  right: 80px;
+  bottom: 21px;
+
+}
+
+.coffe__drink_price {
+  position: absolute;
+  right: 0;
+}
+
+.coffee__eat_title {
+  text-align: end;
+}
+
+.coffee__eat_range {
+  width: 461px;
+}
+
+.coffe__eat_item::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  border: 1px solid var(--coffe-price-border-color);
+  right: 80px;
+  bottom: 21px;
+}
+
+.coffe__eat_price {
+  position: absolute;
+  right: 0;
+}
+
+/*CONTACTS*/
+.contacts__info__title {
+  margin: 0;
+  color: var(--contacts-text-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.contact__info_list {
+  color: var(--contacts-text-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding: 40px 0 0 0;
+}
+
+.contact__info_item:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.contacts__content_wrapper {
+  padding: 40px 0 0 0;
+  justify-content: space-between;
+}
+
+.contact__info_position {
+  color: var(--contacts-text-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 40px 0 0 0;
+}
+
+.contact__info_descr {
+  color: var(--contacts-text-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
