@@ -414,9 +414,32 @@ button:disabled {
   margin: 0 0 40px 0;
 }
 
+.coffee__text {
+  color: var(--coffe-list-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding: 40px 0 0 0;
+}
+
+.coffee__content {
+  justify-content: space-between;
+}
+
+.coffee__position {
+  position: relative;
+}
+
 .coffee__price_wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.coffee__text_wrapper {
+  flex-direction: column;
 }
 
 .coffee__drink_range {
@@ -434,34 +457,18 @@ button:disabled {
   margin: 0;
 }
 
-.coffe__list {
-  color: var(--coffe-list-color);
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
-
-.coffe__item {
-  padding: 40px 0 0 0;
-  position: relative;
-}
-
-.coffe__drink_item::before {
+.coffee__name::before {
   content: '';
   position: absolute;
   width: 100px;
   border: 1px solid var(--coffe-price-border-color);
-  right: 80px;
+  right: -155px;
   bottom: 21px;
-
 }
 
-.coffe__drink_price {
-  position: absolute;
-  right: 0;
+.coffee__eat_wrapper {
+  flex-direction: column;
+  text-align: end;
 }
 
 .coffee__eat_title {
@@ -472,18 +479,13 @@ button:disabled {
   width: 461px;
 }
 
-.coffe__eat_item::before {
+.coffee__eat::before {
   content: '';
   position: absolute;
   width: 100px;
   border: 1px solid var(--coffe-price-border-color);
-  right: 80px;
+  right: -156px;
   bottom: 21px;
-}
-
-.coffe__eat_price {
-  position: absolute;
-  right: 0;
 }
 
 /*CONTACTS*/
