@@ -175,7 +175,7 @@ button:disabled {
   background-repeat: no-repeat;
   min-height: 600px;
   position: relative;
-  background-color: var();
+  background-color: var(--welcome-bg-color);
 }
 
 .title__wrapper {
