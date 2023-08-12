@@ -39,6 +39,7 @@
 }
 
 @media(max-width:1024px) {
+  br {display: none;}
   .about__descr {
     text-align: center;
   }
@@ -52,6 +53,10 @@
   .favorites__tabs_descr {
     width: 100%;
     text-align: left;
+  }
+
+  .coffee__descr {
+    width: 733px;
   }
 
   .coffee__price_wrapper {
@@ -74,6 +79,14 @@
     padding-bottom: 40px;
   }
 
+  .coffee__eat_wrapper {
+    width: 66%;
+  }
+
+  .coffee__eat_range {
+    width: 100%;
+  }
+
   .digital__content_wrapper {
     display: flex;
     flex-direction: column;
@@ -90,12 +103,20 @@
 
   .digital__card_info {
     text-align: center;
-    width: 100%;
+    width: 83%;
+  }
+
+  .digital__info_descr {
+    padding: 38px 0;
   }
 
   .contacts__info {
     width: 100%;
     padding-bottom: 100px;
+  }
+
+  .footer-br {
+    display: block;
   }
 }
 
@@ -120,6 +141,10 @@
 
   .favorit__card:not(:last-child) {
     margin: 0 0 38px 0;
+}
+
+.footer__bottom_title {
+  justify-content: center;
 }
 
 
