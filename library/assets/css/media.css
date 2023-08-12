@@ -40,6 +40,11 @@
 
 @media(max-width:1024px) {
   br {display: none;}
+
+  .welcome-br {
+    display: block;
+  }
+
   .about__descr {
     text-align: center;
   }
@@ -118,9 +123,7 @@
   .footer-br {
     display: block;
   }
-}
 
-@media(max-width:768px) {
   .about__swiper {
     width: 451px;
     padding-bottom: 45px;
@@ -146,6 +149,13 @@
 .footer__bottom_title {
   justify-content: center;
 }
+}
 
+@media(max-width:768px) {
+
+
+}
+
+@media(max-width:320) {
 
 }
