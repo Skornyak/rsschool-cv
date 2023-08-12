@@ -5,3 +5,157 @@
     padding: 0;
   }
 }
+
+@media(max-width:1400px) {
+  .header__logo {
+    width: 100%;
+  }
+
+  .nav__wrapper {
+    display: none;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  .entrance__wrapper {
+    margin: 0 40px 0 0;
+  }
+
+  .burger__wrapper {
+    display: block;
+  }
+
+
+  .favorit__card:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  .favorit__card_wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media(max-width:1024px) {
+  br {display: none;}
+
+  .welcome-br {
+    display: block;
+  }
+
+  .about__descr {
+    text-align: center;
+  }
+
+  .favorites__tabs_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorites__tabs_descr {
+    width: 100%;
+    text-align: left;
+  }
+
+  .coffee__descr {
+    width: 733px;
+  }
+
+  .coffee__price_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__content_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .coffee__price_content {
+    padding-bottom: 40px;
+  }
+
+  .coffee__eat_wrapper {
+    width: 66%;
+  }
+
+  .coffee__eat_range {
+    width: 100%;
+  }
+
+  .digital__content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .digital__card_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 21px;
+  }
+
+  .digital__card_info {
+    text-align: center;
+    width: 83%;
+  }
+
+  .digital__info_descr {
+    padding: 38px 0;
+  }
+
+  .contacts__info {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+
+  .footer-br {
+    display: block;
+  }
+
+  .about__swiper {
+    width: 451px;
+    padding-bottom: 45px;
+  }
+
+  .favorits__tabs {
+    width: 100%;
+  }
+
+  .favorits__contents {
+    padding: 40px 40px 0 0;
+  }
+
+  .favorits__circle {
+    width: 15px;
+    height: 15px;
+  }
+
+  .favorit__card:not(:last-child) {
+    margin: 0 0 38px 0;
+}
+
+.footer__bottom_title {
+  justify-content: center;
+}
+}
+
+@media(max-width:768px) {
+
+
+}
+
+@media(max-width:320) {
+
+}
