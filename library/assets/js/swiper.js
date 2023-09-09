@@ -6,6 +6,11 @@ const swiper = new Swiper('.about__swiper', {
     clickable: true,
   },
 
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
   breakpoints: {
     768: {
       slidesPerView: 1,
