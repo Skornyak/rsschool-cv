@@ -42,6 +42,10 @@
     padding-bottom: 100px;
   }
 
+  .entrance__menu {
+    right: 105px;
+  }
+
   .header__logo {
     width: 100%;
   }
@@ -93,6 +97,14 @@
 
   .about__descr {
     text-align: center;
+  }
+
+  .about__swiper_prev {
+    display: block;
+  }
+
+  .about__swiper_next {
+   display: block;
   }
 
   .favorites__tabs_wrapper {
@@ -398,6 +410,18 @@
 
   .nav__list.visible {
     width: 290px;
+  }
+
+  .about__swiper_prev {
+    position: relative;
+    cursor: pointer;
+    display: none;
+  }
+
+  .about__swiper_next {
+    position: relative;
+    cursor: pointer;
+    display: none;
   }
 
   .about__swiper {
