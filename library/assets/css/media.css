@@ -42,6 +42,10 @@
     padding-bottom: 100px;
   }
 
+  .entrance__menu {
+    right: 105px;
+  }
+
   .header__logo {
     width: 100%;
   }

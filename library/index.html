@@ -44,10 +44,10 @@
             Profile
           </div>
           <div class="entrance__button_wrapper">
-            <button class="btn-reset entrance__menu_btn">
+            <button class="btn-reset entrance__login entrance__menu_btn">
               Log In
             </button>
-            <button class="btn-reset entrance__menu_btn">
+            <button class="btn-reset entrance__register entrance__menu_btn">
               Register
             </button>
           </div>
@@ -460,6 +460,57 @@
         </div>
       </div>
     </section>
+    <div class="modal__login flex">
+      <div class="login__content_wrapper flex">
+        <button class="modal__login_btn modal__btn btn-reset"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+            viewBox="0 0 19 19" fill="none">
+            <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3" />
+            <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3" />
+          </svg></button>
+        <div class="modal__login_header modal__header">Login</div>
+        <form class="modal__login_form" action="#">
+          <div class="modal__form_content flex">
+            <label class="email__lable modal__content_padding modal__text_style" for="email">E-mail or readers
+              card</label>
+            <input class="input__login_style" type="text" name="email" required>
+            <label class="password__lable modal__content_padding modal__text_style" for="password">Password</label>
+            <input class="input__login_style" type="password" name="password" required>
+          </div>
+          <button class="modal__form_btn btn-reset btn-hov">Log In</button>
+        </form>
+        <div class="modal__text_wrapper flex">
+          <p class="modal__login_text">Don’t have an account?</p>
+          <button class="btn-reset modal__text_button">Register</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal__reg">
+      <div class="reg__content_wrapper flex">
+        <button class="modal__reg_btn modal__btn btn-reset"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+            viewBox="0 0 19 19" fill="none">
+            <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3" />
+            <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3" />
+          </svg></button>
+        <div class="modal__login_header modal__header">Register</div>
+        <form class="modal__login_form" action="#">
+          <div class="modal__form_content flex">
+            <label class="email__lable modal__content_padding modal__text_style" >First name</label>
+            <input class="input__login_style" type="text"  required>
+            <label class="password__lable modal__content_padding modal__text_style">Last name</label>
+            <input class="input__login_style" type="text"  required>
+            <label class="email__lable modal__content_padding modal__text_style" for="email">E-mail</label>
+            <input class="input__login_style" type="text" name="email" required>
+            <label class="password__lable modal__content_padding modal__text_style" for="password">Password</label>
+            <input class="input__login_style" type="password" name="password" required>
+          </div>
+          <button class="modal__form_btn btn-reset btn-hov">Sign Up</button>
+        </form>
+        <div class="modal__text_wrapper flex">
+          <p class="modal__login_text">Already have an account?</p>
+          <button class="btn-reset modal__text_button">Register</button>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__content container container-md">
@@ -508,6 +559,8 @@
       </div>
     </div>
   </footer>
+  <script src="./assets/js/modal-reg.js"></script>
+  <script src="./assets/js/modal-login.js"></script>
   <script src="./assets/js/drop-entrance.js"></script>
   <script src="./assets/js/burger.js"></script>
   <script src="./assets/js/tabs.js"></script>
