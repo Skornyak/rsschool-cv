@@ -7,8 +7,8 @@ const swiper = new Swiper('.about__swiper', {
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.about__swiper_next',
+    prevEl: '.about__swiper_prev',
   },
 
   breakpoints: {

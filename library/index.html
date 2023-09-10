@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/css/media.css">
 </head>
 
-<body>
+<body class="body">
   <div class="header__wrapper">
     <header class="header container flex container-md">
       <h1 class="header__logo">Brooklyn Public Library</h1>
@@ -39,6 +39,19 @@
           </svg>
 
         </button>
+        <div class="entrance__menu" id="entrance-menu">
+          <div class="entrance__menu_header">
+            Profile
+          </div>
+          <div class="entrance__button_wrapper">
+            <button class="btn-reset entrance__menu_btn">
+              Log In
+            </button>
+            <button class="btn-reset entrance__menu_btn">
+              Register
+            </button>
+          </div>
+        </div>
       </div>
       <div class="burger__wrapper flex">
         <button class="burger__button btn-reset">
@@ -81,9 +94,9 @@
                 src="./assets/img/swiper-about-img5.png" alt="foto"></div>
           </div>
           <div class="about__swiper_pagination swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
+        <div class=" about__swiper_prev"></div>
+        <div class=" about__swiper_next"></div>
       </div>
     </section>
     <section class="favorites indent-section" id="favorites">
@@ -92,25 +105,27 @@
           Favorites
         </h2>
         <div class="favorites__tabs_wrapper">
-          <p class="favorites__tabs_descr">
-            Pick favorites of season
-          </p>
-          <div class="favorits__tabs flex">
-            <div class="favorit__tab active flex" data-path="one">
-              <div class="favorits__circle"></div>
-              <div class="favorits__title">Winter</div>
-            </div>
-            <div class="favorit__tab flex" data-path="two">
-              <div class="favorits__circle"></div>
-              <div class="favorits__title">Spring</div>
-            </div>
-            <div class="favorit__tab flex" data-path="three">
-              <div class="favorits__circle"></div>
-              <div class="favorits__title">Summer</div>
-            </div>
-            <div class="favorit__tab flex" data-path="four">
-              <div class="favorits__circle"></div>
-              <div class="favorits__title">Autumn</div>
+          <div class="favorits__header_wrapper">
+            <p class="favorites__tabs_descr">
+              Pick favorites of season
+            </p>
+            <div class="favorits__tabs flex">
+              <div class="favorit__tab active flex" data-path="one">
+                <div class="favorits__circle"></div>
+                <div class="favorits__title">Winter</div>
+              </div>
+              <div class="favorit__tab flex" data-path="two">
+                <div class="favorits__circle"></div>
+                <div class="favorits__title">Spring</div>
+              </div>
+              <div class="favorit__tab flex" data-path="three">
+                <div class="favorits__circle"></div>
+                <div class="favorits__title">Summer</div>
+              </div>
+              <div class="favorit__tab flex" data-path="four">
+                <div class="favorits__circle"></div>
+                <div class="favorits__title">Autumn</div>
+              </div>
             </div>
           </div>
           <div class="favorits__contents">
@@ -493,6 +508,7 @@
       </div>
     </div>
   </footer>
+  <script src="./assets/js/drop-entrance.js"></script>
   <script src="./assets/js/burger.js"></script>
   <script src="./assets/js/tabs.js"></script>
   <script src="./assets/js/swiper-bundle.min.js"></script>
