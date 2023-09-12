@@ -480,7 +480,7 @@
         </form>
         <div class="modal__text_wrapper flex">
           <p class="modal__login_text">Don’t have an account?</p>
-          <button class="btn-reset modal__text_button">Register</button>
+          <button  class="btn-reset modal__text_button">Register</button>
         </div>
       </div>
     </div>
@@ -495,15 +495,15 @@
         <form class="modal__login_form" action="#">
           <div class="modal__form_content flex">
             <label class="email__lable modal__content_padding modal__text_style" >First name</label>
-            <input class="input__login_style" type="text"  required>
+            <input class="input__login_style firstNameRegisterForm" type="text"  required>
             <label class="password__lable modal__content_padding modal__text_style">Last name</label>
-            <input class="input__login_style" type="text"  required>
+            <input  class="input__login_style lastNameRegisterForm" type="text"  required>
             <label class="email__lable modal__content_padding modal__text_style" for="email">E-mail</label>
-            <input class="input__login_style" type="text" name="email" required>
+            <input class="input__login_style emailRegisterForm" type="text" name="email" required>
             <label class="password__lable modal__content_padding modal__text_style" for="password">Password</label>
-            <input class="input__login_style" type="password" name="password" required>
+            <input class="input__login_style passwordRegisterForm" type="password" name="password" required>
           </div>
-          <button class="modal__form_btn btn-reset btn-hov">Sign Up</button>
+          <button  id="register" class="modal__form_btn btn-reset btn-hov">Sign Up</button>
         </form>
         <div class="modal__text_wrapper flex">
           <p class="modal__login_text">Already have an account?</p>
@@ -559,6 +559,7 @@
       </div>
     </div>
   </footer>
+  <script src="./assets/js/authorization.js"></script>
   <script src="./assets/js/modal-reg.js"></script>
   <script src="./assets/js/modal-login.js"></script>
   <script src="./assets/js/drop-entrance.js"></script>
