@@ -6,26 +6,21 @@ body {
     display: flex;
 }
 
+.container {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    justify-content: center;
+    padding-top: 100px;
+}
+
 .slider {
     width: 1100px;
     height: 600px;
     overflow: hidden;
-    border: 10px solid #fff;
-}
-
-.middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.navigation {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+    border: 5px solid #fff;
 }
 
 .bar {
@@ -39,14 +34,19 @@ body {
     transition: all .4s ease;
 }
 
+
 .bar:hover {
     opacity: 0.8;
     transform: scale(1.1);
 }
 
+.bar:focus {
+    opacity: 1;
+}
+
 input[name="r"] {
- position: absolute;
- visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
 .slides {
@@ -67,24 +67,35 @@ input[name="r"] {
     height: 100%;
 }
 
-.slide__text {
-    position: absolute;
-    color: #fff;
-    bottom: 0;
+.wrapper__control {
+    width: 1100px;
+    justify-content: end;
+    padding: 20px;
+    align-items: center;
 }
 
-#r1:checked ~ .s1 {
+.slide__text {
+    color: #fff;
+    position: fixed;
+    display: none;
+}
+
+#r1:checked~.slide__text {
+    display: block;
+}
+
+#r1:checked~.s1 {
     margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
+#r2:checked~.s1 {
     margin-left: -25%;
 }
 
-#r3:checked ~ .s1 {
+#r3:checked~.s1 {
     margin-left: -50%;
 }
 
-#r4:checked ~ .s1 {
+#r4:checked~.s1 {
     margin-left: -75%;
 }
