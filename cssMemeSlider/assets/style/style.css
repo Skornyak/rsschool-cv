@@ -80,6 +80,16 @@ input[name="r"] {
     display: none;
 }
 
+.text {
+    color: #ddd;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
 #r1:checked~.slide__text {
     display: block;
 }
