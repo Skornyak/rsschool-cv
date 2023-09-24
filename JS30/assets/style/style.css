@@ -5,9 +5,6 @@
     box-sizing: border-box;
 }
 
-/* :root {
-
-} */
 
 a {
     text-decoration: none;
@@ -28,7 +25,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e4e9ed;
+  background:  #539cbb54;
 }
 
 .player {
@@ -53,6 +50,12 @@ li {
     margin: 25px 0;
 }
 
+.cover__img {
+    &.active {
+        animation: rotateAnimation 3s linear infinite;
+    }
+}
+
 .song {
     font-weight: bold;
     font-size: 24px;
@@ -75,7 +78,7 @@ li {
     background: #2B3C5B;
     border-radius: 5px;
     height: 6px;
-    width: 150px ;
+    /* width: 150px ; */
 }
 
 .buttons {
@@ -86,6 +89,42 @@ li {
     width: 100%;
     margin: 0 auto;
     margin-top: 45px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.footer {
+    border-top: 1px solid #000;
+    background-color: #539cbb54;
+}
+
+.wrapper__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.my__github {
+    
+    color: #000;
+}
+
+.logo__rs {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
