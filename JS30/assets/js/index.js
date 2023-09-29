@@ -8,11 +8,14 @@ const player = document.querySelector('.player'),
       title = document.querySelector('.song'),
       cover = document.querySelector('.cover'),
       coverImg = document.querySelector('.cover__img'),
-      imgSrc = document.querySelector('.img__src');
+      imgSrc = document.querySelector('.img__src'),
+      wrapper = document.querySelector('.wrapper');
+
+      
 //Name songs
       
 const songs = ['Uniqe & Nkeeei feat. Artem Shilovets - Афтерпати (feat. Xxxmanera)', '5утра - Давай Сбежим (Искорки)', 'Ирина Кайратовна - Чина']   
-const img = ['Uniqe & Nkeeei feat. Artem Shilovets - Афтерпати (feat. Xxxmanera)', '', '']   
+const img = ['Uniqe & Nkeeei feat. Artem Shilovets - Афтерпати (feat. Xxxmanera).png', '5утра - Давай Сбежим (Искорки).png', 'Ирина Кайратовна - Чина.png']   
 
 //Defolt song
 let songIndex = 0
@@ -22,9 +25,13 @@ function loadSong (song) {
     title.innerHTML = song
     audio.src = `assets/audio/${song}.mp3`
     cover.src = `assets/img/${songIndex + 1}.svg`
+
+    wrapper.style.backgroundImage = `assets/img/${img}.png`
 }
 
 loadSong(songs[songIndex])
+
+
 
 //play
 function playSong() {
@@ -78,10 +85,26 @@ function prevSong() {
 prevBtn.addEventListener('click', nextSong)
 
 //Progress bar
+const formatTime = (time) => {
+    let min = Math.floor(time / 60);
+    if (min < 10) {
+       min = `0${min}`;
+    }
+    let sec = Math.floor(time % 60);
+    if (sec < 10) {
+       sec = `0${sec}`;
+    }
+    return `${min}:${sec}`
+ }
+ 
 function updateProgress (e) {
    const {duration, currentTime} = e.srcElement
    const progressPercent = (currentTime / duration) * 100
    progress.style.width = `${progressPercent}%`
+   document.getElementById('allTime').innerText = formatTime(duration) || 0
+   document.getElementById('currentTime').innerText = formatTime(currentTime) || 0
+//    console.log(duration);
+//    console.log(currentTime)
 }
 
 audio.addEventListener('timeupdate', updateProgress)
@@ -102,3 +125,13 @@ progressContainer.addEventListener('click', setProgress)
 
 //auto play
 audio.addEventListener('ended', nextSong)
+
+//timer 
+
+// function timer (e) {
+//     const {duration, currentTime} = e.srcElement;
+//     console.log(duration);
+//     console.log(currentTime);
+// }
+
+// timer();
