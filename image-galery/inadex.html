@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link rel="stylesheet" href="./assets/style/normalize.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/media.css">
 </head>
 <body>
-    
+   <main>
+    <h1 class="main__title">Image Gallery</h1>
+    <form action="" method="get" class="search__form">
+        <input class="search__input" name="search" placeholder="search">
+        <button class="search__button" type="submit"></button>
+        
+    </form>
+    <div class="container__img container">
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/natural.avif" alt="photo">
+        </div>
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/cat.jpeg" alt="photo">
+        </div>
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/fenix.jpeg" alt="photo">
+        </div>
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/tiger.jpeg" alt="photo">
+        </div>
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/flower.jpeg" alt="photo">
+        </div>
+        <div class="img__wrapper">
+            <img class="img__content" src="./assets/img/clipdrop.webp" alt="photo">
+        </div>
+    </div>
+   </main>
+   <footer class="footer">
+    <div class="wrapper__content container">
+        <div class="git__wrapper"><a class="git__link" href="">Skornyak</a></div>
+    <div class="year__wrapper">2023</div>
+    <div class="logo__wrapper"><a href="https://rs.school/js-stage0/" class="logo__link"><img src="./assets/img/rs_school_js.svg" alt=""></a></div>
+    </div>
+   </footer>
 </body>
 <script src="./assets/js/index.js"></script>
 </html>
