@@ -1,5 +1,5 @@
 :root {
-    --bg-color:#F8F0E4;
+    --bg-color: #F8F0E4;
     --border-color: #311996;
     --text-color: #311996;
     --title-color: #E12179;
@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -41,7 +42,7 @@ img {
     justify-content: center;
     width: 100%;
     min-height: 70px;
-    padding: 30px 0 0 0 ;
+    padding: 30px 0 0 0;
     margin: 0 0 30px 0;
 }
 
@@ -52,15 +53,59 @@ img {
 
 .search__input {
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+
     padding: 10px;
 }
 
+.search__button {
+   
+    width: 25px;
+    background-color: #311996;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+.svg__search {
+    width: 10px;
+    height: 10px;
+   fill: #fff;
+}
+
+.search__button:hover .svg__search {
+    transform: scale(2.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.search__button_close {
+    background-color: #E12179;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+}
+
+.search__close {
+    width: 10px;
+    height: 10px;
+}
+
+.search__close path {
+    stroke: #fff;
+}
+
+.search__button_close:hover .search__close {
+    transform: scale(2.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
 .container__img {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: center;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 20px;
 }
 
 .img__wrapper {
@@ -93,4 +138,3 @@ img {
     width: 100px;
     height: 100px;
 }
-
