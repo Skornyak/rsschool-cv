@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <title>Flappy Bird</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+    <div class="game__wrapper flex">
+        <canvas id="canvas" width="288px"
+    height="512"></canvas>
+    <div id="game__over">Game Over</div>
+    </div>
+    <footer class="footer container">
+        <div class="footer__content flex">
+            <div class="wrapper"><a href="https://github.com/Skornyak" class="github_link"><img class="footer__git_img"
+                        src="./assets/img/git-hub.png" alt=""></a></div>
+            <div class="wrapper">2023</div>
+            <div class="wrapper"><a href="https://rs.school/js-stage0/" class="school_link"><img
+                        class="footer__school_img" src="./assets/img/rs_school_js.svg" alt=""></a></div>
+        </div>
+    </footer>
+    <script src="./assets/js/game.js"></script>
 </body>
-<script src="./assets/js/index.js"></script>
+
 </html>

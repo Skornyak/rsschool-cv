@@ -3,3 +3,59 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --txt-color: #fff;
+}
+
+/*glob*/
+.container {
+    margin: auto 20px;
+    max-width: 1600px;
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    border: none;
+    
+}
+
+.list__reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.game__wrapper {
+    justify-content: center;
+}
+
+/*footer*/
+.footer__content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__git_img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer__school_img {
+    width: 100px;
+    height: 100px;
+}
+
