@@ -64,11 +64,6 @@ function reloadGame() {
     location.reload();
 }
 
-
-btnReloadGame.addEventListener('click', () => {
-    reloadGame();
-});
-
 function draw() {
     ctx.drawImage(background, 0, 0);
 
@@ -120,7 +115,7 @@ function draw() {
 
 
 
-earth.onload = draw;
+// earth.onload = draw;
 
 //get started
 
@@ -132,9 +127,14 @@ startGame.addEventListener('click', () => {
         input.value == name;
         arr.push(input.value);
         console.log(arr);
+        draw();
         localStorage.setItem('name', arr[0]);
     }
 });
+
+btnReloadGame.addEventListener('click', () => {
+    draw();
+ });
 
 // console.log(localStorage.getItem("name"));
 // console.log(localStorage.getItem("point"));
