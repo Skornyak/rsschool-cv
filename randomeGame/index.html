@@ -12,10 +12,23 @@
     <div class="game__wrapper flex">
         <canvas id="canvas" width="288px"
     height="512"></canvas>
-    <div id="game__over">Game Over</div>
+    <div id="game__over" class="flex">Game Over</div>
+    <div id="relod__btn">New Game</div>
+    <div id="form__registration" class="form__registration">
+        <h1 class="main__title">Flippy Bird</h1>
+        <div class="form__wrapper flex">
+            <form action="" autocomplete="off" class="flex form">
+                <input type="text" id="input" name="name" placeholder="Name" class="form__name">
+                <span id="warning-active" class="warning">Заполните поле</span>
+                <!-- <input type="text"  name="name" placeholder="Second name" class="form__name second name"> -->
+                <div class="btn" id="start__btn">Start Game</div>
+            </form>
+        </div>
     </div>
-    <footer class="footer container">
-        <div class="footer__content flex">
+    </div>
+    
+    <footer class="footer">
+        <div class="footer__content flex  container">
             <div class="wrapper"><a href="https://github.com/Skornyak" class="github_link"><img class="footer__git_img"
                         src="./assets/img/git-hub.png" alt=""></a></div>
             <div class="wrapper">2023</div>
@@ -23,6 +36,7 @@
                         class="footer__school_img" src="./assets/img/rs_school_js.svg" alt=""></a></div>
         </div>
     </footer>
+    <script src="./assets/js/localStorage.js"></script>
     <script src="./assets/js/game.js"></script>
 </body>
 

@@ -1,6 +1,21 @@
+const btnReloadGame = document.getElementById('relod__btn');
+const space = 32;
+const startGame = document.getElementById('start__btn');
+const input = document.getElementById('input');
+const warningActive = document.getElementById('warning-active');
+const formRegistration = document.getElementById('form__registration');
+const gap = 90;
+let score = 0;
+
+const resultPlayer = { name: 0,
+score: 0 };
+const arr = [];
+
+// search tag canvas and determenid a way to work with it 
 let cvs = document.getElementById("canvas");
 let ctx = cvs.getContext("2d");
 
+// added image and audio for game 
 let bird = new Image();
 let background = new Image();
 let pipeTop = new Image();
@@ -13,16 +28,12 @@ pipeTop.src = "assets/img/pipeTop.png";
 pipeBottom.src = "assets/img/pipeBottom.png";
 earth.src = "assets/img/earth.png";
 
-//sound file
+// added sound file
 let fly = new Audio();
 let scoreAudio = new Audio();
 
 fly.src = "assets/audio/fly.mp3"
 scoreAudio.src = "assets/audio/score.mp3"
-
-
-let gap = 90;
-
 //click for keybord
 
 document.addEventListener("keydown", moveUp);
@@ -40,16 +51,25 @@ pipe[0] = {
 }
 
 
-let score = 0;
-
 //position bird
 let xPos = 10;
 let yPos = 150;
 let grav = 1.5;
 
+function gameOver() {
+    document.getElementById('game__over').style.opacity = 0;
+}
+
+function reloadGame() {
+    location.reload();
+}
+
+
+btnReloadGame.addEventListener('click', () => {
+    reloadGame();
+});
 
 function draw() {
-    // requestAnimationFrame(draw);
     ctx.drawImage(background, 0, 0);
 
     for (let i = 0; i < pipe.length; i++) {
@@ -68,15 +88,19 @@ function draw() {
         if (xPos + bird.width >= pipe[i].x
             && xPos <= pipe[i].x + pipeTop.width
             && (yPos <= pipe[i].y + pipeTop.height
-                || yPos + bird.height >= pipe[i].y + pipeTop.height + gap) 
-                || yPos + bird.height >= cvs.height - earth.height){
-                    
+                || yPos + bird.height >= pipe[i].y + pipeTop.height + gap)
+            || yPos + bird.height >= cvs.height - earth.height) {
+
+            gameOver();
+            btnReloadGame.style.opacity = 1;
             e.preventDefault();
         }
 
         if (pipe[i].x == 5) {
-            score ++;
+            score++;
             scoreAudio.play();
+            arr.push(score)
+            // localStorage.setItem('point', score)
         }
 
     }
@@ -94,12 +118,27 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
-pipeBottom.onload = draw;
 
-// draw();
+
+earth.onload = draw;
+
+//get started
+
+startGame.addEventListener('click', () => {
+    if (input.value == '') {
+        warningActive.classList.add('warning__active')
+    } else {
+        formRegistration.classList.add('start_game')
+        input.value == name;
+        arr.push(input.value);
+        console.log(arr);
+        localStorage.setItem('name', arr[0]);
+    }
+});
+
+// console.log(localStorage.getItem("name"));
+// console.log(localStorage.getItem("point"));
 
 document.addEventListener("keydown", someMethod);
 
-function someMethod() {
-
-}
+function someMethod() { }

@@ -6,6 +6,8 @@
 
 :root {
     --txt-color: #fff;
+    --bg-color: #000;
+    --bg-footer-color: #b89e14;
 }
 
 /*glob*/
@@ -28,22 +30,154 @@ img {
     max-width: 100%;
 }
 
-.btn {
-    border: none;
-    
-}
-
 .list__reset {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+.start_game {
+    display: none;
+}
+
+
+
 .game__wrapper {
+    position: relative;
     justify-content: center;
 }
 
+#game__over {
+    position: absolute;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    opacity: 0;
+    font-size: 24px;
+}
+
+#relod__btn {
+    position: absolute;
+    display: flex;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    top: 70%;
+    opacity: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#relod__btn:hover {
+    background-color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+#start__game {
+    position: absolute;
+    display: flex;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    top: 70%;
+    opacity: 1;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#start__game:hover {
+    background-color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+.form {
+    flex-direction: column;
+}
+
+input {
+    height: 30px;
+    border-radius: 20px;
+    padding: 0 20px ;
+}
+
+input::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form__name {
+    position: relative;
+}
+
+.warning {
+   opacity: 0;
+    color: red;
+    position: absolute;
+    top: 165px;
+    width: 180px;
+    text-align: center;
+}
+
+.warning__active {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+.form__name:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form__registration {
+    /* display: none; */
+    background-color:#333;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main__title {
+    font-size: 34px;
+    color: var(--bg-footer-color);
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0 0;
+}
+
+.form__wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+#start__btn {
+    text-align: center;
+    color: var(--bg-footer-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#start__btn:hover {
+    transform: scale(1.5);
+    transition: all .3s ease-in-out;
+}
+
 /*footer*/
+.footer {
+    background-color: var(--bg-footer-color);
+}
 .footer__content {
     align-items: center;
     justify-content: space-between;
