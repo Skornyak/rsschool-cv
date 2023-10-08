@@ -34,14 +34,18 @@ let scoreAudio = new Audio();
 
 fly.src = "assets/audio/fly.mp3"
 scoreAudio.src = "assets/audio/score.mp3"
+
 //click for keybord
-
-document.addEventListener("keydown", moveUp);
-
 function moveUp() {
     yPos -= 35;
     fly.play();
 }
+
+document.addEventListener("keydown", function (event) {
+    if (event.keyCode === 32) {
+       moveUp();
+    }
+})
 
 //create block
 let pipe = [];
@@ -57,11 +61,7 @@ let yPos = 150;
 let grav = 1.5;
 
 function gameOver() {
-    document.getElementById('game__over').style.opacity = 0;
-}
-
-function reloadGame() {
-    location.reload();
+    document.getElementById('game__over').style.opacity = 1;
 }
 
 function draw() {
@@ -95,7 +95,7 @@ function draw() {
             score++;
             scoreAudio.play();
             arr.push(score)
-            // localStorage.setItem('point', score)
+            localStorage.setItem('point', score)
         }
 
     }
@@ -111,14 +111,8 @@ function draw() {
     ctx.fillText("Score: " + score, 10, cvs.height - 20);
 
     requestAnimationFrame(draw);
-}
-
-
-
-// earth.onload = draw;
-
+};
 //get started
-
 startGame.addEventListener('click', () => {
     if (input.value == '') {
         warningActive.classList.add('warning__active')
@@ -132,13 +126,19 @@ startGame.addEventListener('click', () => {
     }
 });
 
-btnReloadGame.addEventListener('click', () => {
+
+//get start game when press for Enter
+input.addEventListener('keypress', function(e){
+ if(event.which === 13) {
+    formRegistration.classList.add('start_game');
+    input.value == name;
+    arr.push(input.value);
     draw();
- });
-
-// console.log(localStorage.getItem("name"));
-// console.log(localStorage.getItem("point"));
-
-document.addEventListener("keydown", someMethod);
-
-function someMethod() { }
+    localStorage.setItem('name', arr[0]);
+    e.preventDefault();
+ }
+});
+console.log(localStorage.getItem('name'));
+console.log(localStorage.getItem('point'));
+//write function which relod game when click button
+// btnReloadGame.addEventListener('click', draw());
