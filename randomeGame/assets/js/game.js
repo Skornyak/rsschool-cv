@@ -5,11 +5,15 @@ const input = document.getElementById('input');
 const warningActive = document.getElementById('warning-active');
 const formRegistration = document.getElementById('form__registration');
 const gap = 90;
-let score = 0;
 
-const resultPlayer = { name: 0,
-score: 0 };
-const arr = [];
+let score;
+//create block
+let pipe;
+
+//position bird
+let xPos;
+let yPos;
+let grav;
 
 // search tag canvas and determenid a way to work with it 
 let cvs = document.getElementById("canvas");
@@ -47,25 +51,29 @@ document.addEventListener("keydown", function (event) {
     }
 })
 
-//create block
-let pipe = [];
-pipe[0] = {
-    x: cvs.width,
-    y: 0
+const resetStartValues = () => {
+    xPos = 10;
+    yPos = 150;
+    grav = 1.5;
+    pipe = [];
+    pipe[0] = {
+        x: cvs.width,
+        y: 0
+    }
+    score = 0;
 }
 
-
-//position bird
-let xPos = 10;
-let yPos = 150;
-let grav = 1.5;
+resetStartValues();
 
 function gameOver() {
     document.getElementById('game__over').style.opacity = 1;
+    btnReloadGame.style.opacity = 1;
 }
 
 function draw() {
     ctx.drawImage(background, 0, 0);
+
+    let isGameOver = false;
 
     for (let i = 0; i < pipe.length; i++) {
         ctx.drawImage(pipeTop, pipe[i].x, pipe[i].y);
@@ -73,7 +81,7 @@ function draw() {
 
         pipe[i].x--;
 
-        if (pipe[i].x == 125) {
+        if (pipe[i].x === 125) {
             pipe.push({
                 x: cvs.width,
                 y: Math.floor(Math.random() * pipeTop.height) - pipeTop.height
@@ -87,15 +95,42 @@ function draw() {
             || yPos + bird.height >= cvs.height - earth.height) {
 
             gameOver();
-            btnReloadGame.style.opacity = 1;
-            e.preventDefault();
+            isGameOver = true;
+            // e.preventDefault();
         }
 
-        if (pipe[i].x == 5) {
+        if (pipe[i].x === 5) {
             score++;
             scoreAudio.play();
-            arr.push(score)
-            localStorage.setItem('point', score)
+            const oldScores = JSON.parse(localStorage.getItem('scores')) || [];
+
+            const userIndex = oldScores.findIndex((user) => {
+                return user.name === input.value
+            })
+
+            if (userIndex === -1) {
+                const newScores = [
+                    ...oldScores,
+                    {
+                        name: input.value,
+                        score
+                    }
+                ].sort((a, b) => {
+                    return b.score - a.score
+                })
+                if (newScores.length <= 10 ) {
+                    localStorage.setItem('scores', JSON.stringify(newScores));
+                } else {
+                    localStorage.setItem('scores', JSON.stringify(newScores.slice(0, 10)));
+                }
+
+
+            } else {
+                if (oldScores[userIndex].score < score) {
+                    oldScores[userIndex].score = score;
+                    localStorage.setItem('scores', JSON.stringify(oldScores.sort((a, b) => b.score - a.score)))
+                }
+            }
         }
 
     }
@@ -110,35 +145,53 @@ function draw() {
     ctx.font = "24px Verdana";
     ctx.fillText("Score: " + score, 10, cvs.height - 20);
 
+    if (isGameOver) {
+        return;
+    }
+
     requestAnimationFrame(draw);
 };
-//get started
-startGame.addEventListener('click', () => {
-    if (input.value == '') {
+
+const startGameFn = () => {
+    if (input.value === '') {
         warningActive.classList.add('warning__active')
     } else {
         formRegistration.classList.add('start_game')
-        input.value == name;
-        arr.push(input.value);
-        console.log(arr);
         draw();
-        localStorage.setItem('name', arr[0]);
     }
+}
+//get started
+startGame.addEventListener('click', () => {
+    startGameFn();
 });
 
 
 //get start game when press for Enter
 input.addEventListener('keypress', function(e){
- if(event.which === 13) {
+ if(e.key === 'Enter') {
     formRegistration.classList.add('start_game');
-    input.value == name;
-    arr.push(input.value);
     draw();
-    localStorage.setItem('name', arr[0]);
     e.preventDefault();
  }
 });
-console.log(localStorage.getItem('name'));
-console.log(localStorage.getItem('point'));
 //write function which relod game when click button
-// btnReloadGame.addEventListener('click', draw());
+btnReloadGame.addEventListener('click', () => {
+    document.getElementById('game__over').style.opacity = 0;
+    btnReloadGame.style.opacity = 0;
+    resetStartValues();
+    startGameFn();
+});
+
+const user = document.getElementById('record__item');
+const recordList = document.getElementById('record__list');
+
+const recordArray = JSON.parse(localStorage.getItem('scores'));
+
+recordArray.sort((a, b) => {
+    return b.score - a.score
+});
+
+recordArray.forEach((item) => {
+    recordList.innerHTML += `<li id="record__item" class="record__item">${item.name}: ${item.score} point('s)</li>`
+});
+
