@@ -1,0 +1,115 @@
+@media(max-width:1400px) {
+  .projects {
+    width: 100%;
+    border-bottom: 2px solid var(--bg-color-body);
+  }
+
+  .projects__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+  .about {
+    border: none;
+  }
+
+  .about__descr {
+    font-size: 30px;
+  }
+
+  .skills {
+    width: 100%;
+    border-bottom: 2px solid var(--bg-color-body);
+  }
+
+  .education {
+    width: 100%;
+  }
+
+}
+
+@media(max-width:1200px) {
+  .about {
+    width: 100%;
+  }
+
+  .contacts {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media(max-width:992px) {
+  .contacts {
+    display: block;
+  }
+
+  .contacts__list {
+    font-size: 15px;
+    padding: 30px 80px;
+  }
+}
+
+@media(max-width:720px) {
+  .about__title_name {
+    font-size: 40px;
+  }
+  .header__list {
+    display: none;
+  }
+}
+
+@media(max-width:540px) {
+  .contacts__list {
+    font-size: 10px;
+    padding: 10px 30px;
+  }
+
+  .about__title_name {
+    font-size: 20px;
+  }
+
+  .about__title_profession {
+    font-size: 20px;
+  }
+
+  .about__descr {
+    padding: 30px 80px;
+    font-size: 21px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .projects__list {
+    display: block;
+  }
+
+  .skills__item_img {
+    flex-shrink: 0;
+  }
+
+  .skilss__item {
+    flex-direction: column;
+  }
+
+  .html-level {
+    width: 300px;
+  }
+
+  .css-level {
+    width: 300px;
+  }
+
+  .footer__create_descr {
+    display: none;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+
+

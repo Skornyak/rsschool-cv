@@ -1,0 +1,7 @@
+@media(max-width:960px) {
+    .container__img {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+      }
+}
