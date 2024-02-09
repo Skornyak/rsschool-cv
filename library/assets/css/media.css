@@ -1,0 +1,513 @@
+@media(max-width:1440px) {
+  .container-md {
+    max-width: 1440px;
+    margin: 0 20px;
+    padding: 0;
+  }
+}
+
+@media(max-width:1400px) {
+  .burger--button-active .burger__line:nth-child(1) {
+    top: 8px;
+    left: 0%;
+    transform: translateX(-50%);
+    transform: rotate(-45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .burger--button-active .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger--button-active .burger__line:nth-child(3) {
+    bottom: 10px;
+    left: 0%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .nav__list.visible {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    top: 80px;
+    transition: top linear 0.4s;
+    background-color: #000;
+    width: 332px;
+    height: 353px;
+    text-align: center;
+    padding-top: 41px;
+    padding-bottom: 100px;
+  }
+
+  .entrance__menu {
+    right: 105px;
+  }
+
+  .entrance__menu_loggined {
+    right: 105px;
+  }
+
+  .header__logo {
+    width: 100%;
+  }
+
+  .nav__wrapper {
+   min-width: 200px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    top: -700px;
+  }
+
+  .nav__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .entrance__wrapper {
+    margin: 0 40px 0 0;
+  }
+
+  .burger__wrapper {
+    display: block;
+  }
+
+
+  .favorit__card:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  .favorit__card_wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media(max-width:1024px) {
+  br {
+    display: none;
+  }
+
+  .welcome-br {
+    display: block;
+  }
+
+  .about__descr {
+    text-align: center;
+  }
+
+  .about__swiper_prev {
+    display: block;
+  }
+
+  .about__swiper_next {
+   display: block;
+  }
+
+  .favorites__tabs_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorites__tabs_descr {
+    width: 100%;
+    text-align: left;
+  }
+
+  .coffee__descr {
+    width: 733px;
+  }
+
+  .coffee__price_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__content_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .coffee__price_content {
+    padding-bottom: 40px;
+  }
+
+  .coffee__eat_wrapper {
+    width: 66%;
+  }
+
+  .coffee__eat_range {
+    width: 100%;
+  }
+
+  .digital__content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .digital__card_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 21px;
+  }
+
+  .digital__card_info {
+    text-align: center;
+    width: 83%;
+  }
+
+  .digital__info_descr {
+    padding: 38px 0;
+  }
+
+  .contacts__info {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+
+  .footer-br {
+    display: block;
+  }
+
+  .about__swiper {
+    width: 451px;
+    padding-bottom: 45px;
+  }
+
+  .favorits__tabs {
+    width: 100%;
+  }
+
+  .favorits__contents {
+    padding: 40px 40px 0 0;
+  }
+
+  .favorits__circle {
+    width: 15px;
+    height: 15px;
+  }
+
+  .favorit__card:not(:last-child) {
+    margin: 0 0 38px 0;
+  }
+
+  .footer__bottom_title {
+    justify-content: center;
+  }
+}
+
+@media(max-width:752px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .title::before {
+    bottom: -11px;
+  }
+
+  .title__wrapper {
+    width: 300px;
+    height: 120px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+  }
+
+  .welcome {
+    min-height: 300px;
+  }
+
+  .welcome__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .about__descr {
+    font-size: 15px;
+  }
+
+  .favorits__tabs {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .favorit__tab {
+    font-size: 12px;
+  }
+
+  .favorit__tab:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .favorit__card {
+    width: 430px;
+  }
+
+  .favorit__card_picks {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 1px;
+  }
+
+  .favorit__card_title {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .favorit__card_author {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .favorit__card_descr {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 1px;
+  }
+
+  .coffee__title_range {
+    font-size: 20px;
+  }
+
+  .coffee__drink_range {
+    width: 340px;
+  }
+
+  .coffee__descr {
+    width: auto;
+    font-size: 10px;
+    line-height: 25px;
+  }
+
+  .coffee__text {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding: 20px 0 0 0;
+  }
+
+  .contacts__map {
+    display: none;
+  }
+
+  .contacts__info__title {
+    font-size: 10px;
+  }
+
+  .contact__info_list {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  .contact__info_position {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  .contact__info_descr {
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  .digital__form_wrapper {
+    width: 300px;
+  }
+
+  .digital__card_title {
+    font-size: 15px;
+  }
+
+  .digital__form {
+    width: 260px;
+  }
+
+  .digital__form_title {
+    font-size: 15px;
+  }
+
+  .digital-input {
+    font-size: 15px;
+    width: 200px;
+  }
+
+  .digital__form_btn {
+    padding: 5px 10px;
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .digital__info_title {
+    font-size: 15px;
+  }
+
+  .digital__info_descr {
+    font-size: 10px;
+    padding: 10px 0;
+  }
+
+  .digital__info_btn {
+    padding: 5px;
+    font-size: 7px;
+    width: 50px;
+  }
+
+  .footer__adress_descr {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .schedule {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .footer__bottom_date {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .footer__bottom_title {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .footer__bottom_username {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+@media(max-width:575px) {
+
+  .nav__wrapper {
+    min-width: 90px;
+  }
+
+  .nav__list.visible {
+    width: 290px;
+  }
+
+  .about__swiper_prev {
+    position: relative;
+    cursor: pointer;
+    display: none;
+  }
+
+  .about__swiper_next {
+    position: relative;
+    cursor: pointer;
+    display: none;
+  }
+
+  .about__swiper {
+    width: 290px;
+  }
+
+  .favorit__card {
+    width: 300px;
+  }
+
+  .favorit__card_content {
+    padding-right: 39px;
+  }
+
+  .favorit__card_img {
+    width: 150px;
+    height: 223px;
+    top: 60%;
+  }
+
+  .contacts__map {
+    display: none;
+  }
+
+  .coffee__eat_title {
+    text-align: start;
+  }
+
+  .coffee__drink_range {
+    width: 300px;
+  }
+
+  .coffee__name::before {
+    width: 30px;
+    bottom: 5px;
+    right: -111px;
+  }
+
+  .coffee__eat_range {
+    width: 300px;
+  }
+
+  .coffee__eat_wrapper {
+    text-align: start;
+  }
+
+  .coffee__eat::before {
+    width: 30px;
+    right: -14px;
+    bottom: 7px;
+  }
+}
+
+@media(max-width:330px) {
+
+  .header__logo {
+    line-height: 23px;
+  }
+
+  .favorit__card {
+    width: 264px;
+  }
+
+  .favorit__card_img {
+    width: 100px;
+    height: 146px;
+    top: 74%;
+  }
+
+
+  .footer__adress_wrapper {
+    flex-direction: column;
+    align-items: inherit;
+  }
+
+  .footer__bottom_part {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 23px;
+  }
+
+  .footer__bottom_username {
+    padding-top: 20px;
+  }
+}
