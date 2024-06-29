@@ -1,0 +1,105 @@
+:root {
+    --bg-white-theme: #F8F0E4;
+    --text-dark-theme: #F8F0E4;
+    --bg-dark-theme:#1D262D;
+    --text-day-theme:#1D262D;
+    --gold-color: #BB945F;
+    --black-font-color: #000000;
+    --gray-color: #8E8E8E;
+    --white-color: #fff;
+}
+
+/*GLOB*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:'Inter', sans-serif ;
+    background-color: var(--bg-dark-theme);
+    color: var(--text-dark-theme);
+    transition: background 0.6s ease-in-out;
+}
+
+.day-them {
+    background-color: var(--bg-white-theme);
+    color: var(--text-day-theme);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conatiner {
+    margin: 0 20px;
+}
+
+.list_reset {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn_reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*.title {}*/
+
+
+
+/*HEADER*/
+
+
+.header__inner {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.change__them_btn {
+    width: 20px;
+    height: 20px;
+    background-color: #BB945F;
+    border-radius: 50%;
+}
+
+.nav_font {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+/*ABOUT*/
+.about__wrapper_img {
+    justify-content: center;
+    align-items: center;
+}
+.about__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.about__title {
+    justify-content: center;
+}
+
+.about__job_title {
+    font-size: 32px;
+    justify-content: center;
+}
