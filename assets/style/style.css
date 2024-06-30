@@ -89,10 +89,7 @@ a {
     align-items: center;
 }
 .about__img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-
+    height: 300px;
 }
 
 .about__title {
@@ -102,4 +99,6 @@ a {
 .about__job_title {
     font-size: 32px;
     justify-content: center;
+    border-bottom: solid 3px var(--gold-color);
+    padding-bottom: 20px;
 }
