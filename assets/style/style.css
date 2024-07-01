@@ -32,12 +32,13 @@ a {
     cursor: pointer;
 }
 
-.conatiner {
+.container {
     margin: 0 20px;
 }
 
 .list_reset {
     list-style: none;
+    padding: 0;
 }
 
 .flex {
@@ -101,4 +102,17 @@ a {
     justify-content: center;
     border-bottom: solid 3px var(--gold-color);
     padding-bottom: 20px;
+}
+/*CONTACTS*/
+.contact__title {
+    margin: 0;
+}
+
+.contact__item:not(:last-child) {
+    padding: 0 0 10px 0;
+}
+/*SUMMARY*/
+
+.summary__descr {
+    max-width: 50%;
 }
