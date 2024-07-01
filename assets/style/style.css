@@ -65,12 +65,6 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-.change__them_btn {
-    width: 20px;
-    height: 20px;
-    background-color: #BB945F;
-    border-radius: 50%;
-}
 
 .nav_font {
     font-weight: 600;
