@@ -175,4 +175,10 @@ a {
     height: 100px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.footer__svg_git {
+    width: 40px;
+    height: 40px;
 }
